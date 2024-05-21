@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Group, Burger, Title } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './header.module.css';
+import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
 
 const links = [
   { link: '/', label: 'Home' },
@@ -38,6 +39,7 @@ export function Header() {
         <Title>Arsalan</Title>
         <Group gap={5} visibleFrom="xs">
           {items}
+          <ColorSchemeToggle />
         </Group>
 
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
